@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Test IAM Password Policy
+
+Resources:
+  PasswordPolicy:
+    Type: MY::IAM::PasswordPolicy
+    Properties:
+      MinimumPasswordLength: 8
+      RequireSymbols: true
+      RequireNumbers: true
+      RequireUppercaseCharacters: true
+      RequireLowercaseCharacters: true
+      AllowUsersToChangePassword: true
+      MaxPasswordAge: 30
+      PasswordReusePrevention: 1
+      HardExpiry: true
